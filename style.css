@@ -1,0 +1,86 @@
+
+
+body{
+    background-color: rgb(255, 247, 236);
+    padding: 15px;
+}
+
+.button__1{
+    /* Shape */
+    width: 420px;
+    height: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+    /* Shadow */
+    box-shadow: 
+        -6px -6px 12px -3px rgba(255, 255, 255, 80%),
+        6px 6px 12px -3px rgba(0, 0, 0, 20%);
+    /*Center content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__2{
+    /* Shape */
+    width: calc(420px - 30px);
+    height: calc(200px - 30px);
+    background-color: #d3d3d3;
+    border-radius: 100px;
+    /* Shadow */
+    box-shadow: 
+        inset -3px -3px 6px -3px rgba(255, 255, 255, 80%),
+        inset 3px 3px 18px -3px rgba(0, 0, 0, 20%);
+    /* Content Position*/
+    position: relative;
+    /* Content Position*/
+    transition: background .2s ease;
+}
+
+.button__3{
+    /* Shape */
+    width: calc(200px - 60px);
+    height: calc(200px - 60px);
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    /* Position */
+    top: 15px;
+    left: 15px;
+    /* Shadow */
+    box-shadow: 
+        inset -3px -3px 6px -3px rgba(255, 255, 255, 80%),
+        inset 3px 3px 6px -3px rgba(0, 0, 0, 20%);
+}
+
+.shadow__3{
+    /* Shadow */
+    box-shadow: 
+    inset 0px 2px 4px -1px rgba(0, 0, 0, 15%),
+        inset 0px -2px 4px 0px rgba(255, 255, 255, 50%);
+}
+
+.button__1 input{display: block;}
+.button__1 input + .button__2 .button__3{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: left .2s ease;
+}
+
+.button__1 input[type=checkbox]:checked + .button__2{
+    /* Shape */
+    background: blue;
+    /* Shadow */
+    box-shadow: 
+        inset -3px -3px 6px -3px rgba(255, 255, 255, 80%),
+        inset 3px 3px 18px -3px rgba(0, 0, 0, 20%)
+        -3px -3px 35px -3px blue;
+}
+
+.button__1 input[type=checkbox]:checked + .button__2 .button__3{
+    left: 70px;
+    box-shadow: 
+        0px 2px 10px -1px blue inset
+        0px 2px 4px -1px rgba(0, 0, 0, 15%) inset,
+        0px -2px 4px 0px rgba(255, 255, 255, 50%) inset;
+}

@@ -1,0 +1,49 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    object-fit: contain;
+}
+
+header ul{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+/*
+*/
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+}
+
+/*
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+article{
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+*/
+
+article img{     
+    width: 100%;        
+}
+
+article p{                
+    text-align: justify; 
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
